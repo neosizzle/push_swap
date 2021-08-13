@@ -28,6 +28,7 @@ void	get_instr(char **instr)
 		if (read_byte < 0)
 		{
 			ft_putstr_fd("Read Error\n", 1);
+			exit(-1);
 			break ;
 		}
 	}

@@ -23,7 +23,8 @@ static t_stacks	init_stacks(int argc, char *argv[])
 	{
 		free(stacks.a);
 		free(stacks.b);
-		error();
+		ft_putstr_fd("Error\n", 1);
+		exit(-1)
 	}
 	return (stacks);
 }
