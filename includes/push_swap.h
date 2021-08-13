@@ -11,4 +11,4 @@ int		get_median(int *median, int *stack, int len);
 int		quick_sort_a(t_stacks *stacks, t_fun *fun_list, int len);
 int		quick_sort_b(t_stacks *stacks, t_fun *fun_list, int len);
 
-#endif  //!__PUSH_SWAP__H__
+#endif
