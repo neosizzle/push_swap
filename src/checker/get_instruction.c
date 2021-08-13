@@ -1,5 +1,15 @@
 #include "checker.h"
 
+//this function will get all input
+//from stdin and put it in
+//*instr
+/*
+1. init instr with empty string and read the first 1024 bytes
+2. while the read bytes is more than 0 (got input)
+3. null terminate buffer
+4. join the instructions with the buffer
+5. read until EOF or error occur
+*/
 void	get_instr(char **instr)
 {
 	char	buf[1024];

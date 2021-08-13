@@ -1,6 +1,6 @@
 NAME1 = checker
 NAME2 = push_swap
-GCC = gcc -Wall -Wextra -fsanitize=address
+GCC = gcc -Wall -Wextra
 SRCS1 = src/checker/*.c src/common/*.c
 SRCS2 = src/push_swap/*.c src/common/*.c
 INCLUDES = includes

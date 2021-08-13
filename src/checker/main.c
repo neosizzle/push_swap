@@ -1,4 +1,3 @@
-
 #include "checker.h"
 
 //frees all malloc ptrs passed in as args
@@ -11,6 +10,7 @@ static void	end(t_stacks stacks, t_fun *fun_list, char *instr, char *temp)
 	delete_funlist(fun_list);
 }
 
+//same purpsoe as init stacks on push_swap main.c
 static t_stacks	init_stacks(int argc, char *argv[])
 {
 	t_stacks	stacks;
@@ -28,6 +28,15 @@ static t_stacks	init_stacks(int argc, char *argv[])
 	return (stacks);
 }
 
+/*
+1. checks for invalid args
+2. init stacks and func list
+3. call helper to get instructions from stdin
+4. replace \n with spaces and trim the last space
+5. call helper function to execute all the instructions
+6. calls checker function to validate its sorted or not
+7. free all malloced memory
+*/
 int	main(int argc, char *argv[])
 {
 	t_stacks	stacks;
