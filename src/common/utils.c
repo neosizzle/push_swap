@@ -29,20 +29,42 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n)
 }
 
 /*
-** Initializes the stream associated with the file path.
+** Returns true if the strangs are similar, false otherwise.
 */
-t_file	*ft_fopen(const char *path)
+int	ft_strequ(char const *s1, char const *s2)
 {
-	t_file	*stream;
+	if (!s1 && !s2)
+		return (1);
+	if (!s1 || !s2)
+		return (0);
+	return (!ft_strcmp(s1, s2));
+}
 
-	if (!(stream = (t_file *)malloc(sizeof(t_file))))
-		return (NULL);
-	if ((stream->fd = open(path, O_RDONLY)) == -1)
+/*
+** Compares s1 and s2 and returns 0 if they are similar, a different value
+** otherwise.
+*/
+int	ft_strcmp(const char *s1, const char *s2)
+{
+	while (*s1 && *s2 && *s1 == *s2)
 	{
-		free(stream);
-		return (NULL);
+		s1++;
+		s2++;
 	}
-	ft_bzero(stream->buf, sizeof(char) * (1024 + 1));
-	stream->i = 0;
-	return (stream);
+	return ((unsigned char)(*s1) - (unsigned char)(*s2));
+}
+
+/*
+** Replaces one character with another in a string
+*/
+void	ft_strrplc(char *str, char a, char b)
+{
+	int	i;
+
+	i = -1;
+	while (str[++i])
+	{
+		if (str[i] == a)
+			str[i] = b;
+	}
 }

@@ -13,7 +13,7 @@ BONUS_OBJS = ${BONUS_SRCS:.c=.o}
 INCLUDE = libft.h
 ARRCS = ar rcs
 RANLIB = ranlib
-CCFLAGS = -Wall -Werror -Wextra
+CCFLAGS = -Wall -Werror -Wextra -fsanitize=address
 CC = gcc
 NAME = libft.a
 

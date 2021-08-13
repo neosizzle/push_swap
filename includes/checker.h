@@ -2,7 +2,6 @@
 # define CHECKER_H
 
 # include "common.h"
-#include <stdio.h>
 
 void	usage(void);
 void	checker(t_stacks stacks);
